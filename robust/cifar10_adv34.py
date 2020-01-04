@@ -10,8 +10,6 @@ import torchvision.transforms as trn
 import torchvision.datasets as dset
 import torch.nn.functional as F
 from tqdm import tqdm
-from models.allconv import AllConvNet
-from models.wrn import WideResNet
 import json
 from . import robust_attacks
 
