@@ -209,13 +209,13 @@ epoch_step = json.loads(args.epoch_step)
 for epoch in range(0, args.epochs):
     state['epoch'] = epoch
 
+    begin_epoch = time.time()
+
     if epoch in epoch_step:
         lr = optimizer.param_groups[0]['lr'] * args.lr_decay_ratio
         optimizer = torch.optim.SGD(
             net.parameters(), lr, momentum=state['momentum'],
             weight_decay=state['decay'], nesterov=True)
-
-    begin_epoch = time.time()
 
     train()
     test()

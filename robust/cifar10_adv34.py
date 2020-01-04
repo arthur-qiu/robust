@@ -287,14 +287,14 @@ for epoch in range(0, args.epochs):
 
     begin_epoch = time.time()
 
-    train()
-    test()
-
     if epoch % 10 == 9:
         lr = optimizer.param_groups[0]['lr'] * args.lr_decay_ratio
         optimizer = torch.optim.SGD(
             net.parameters(), lr, momentum=state['momentum'],
             weight_decay=state['decay'], nesterov=True)
+
+    train()
+    test()
 
     # Save model
     if epoch % 10 == 9:
