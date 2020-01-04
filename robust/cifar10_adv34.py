@@ -72,7 +72,7 @@ train_transform = trn.Compose([trn.RandomHorizontalFlip(), trn.RandomCrop(32, pa
 test_transform = trn.Compose([trn.ToTensor()])
 
 if args.dataset == 'cifar10':
-    train_data = dset.CIFAR10(args.dataroot, train=True, transform=train_transform)
+    train_data = dset.CIFAR10(args.dataroot, train=True, transform=train_transform, download=True)
     test_data = dset.CIFAR10(args.dataroot, train=False, transform=test_transform)
     num_classes = 10
 else:
