@@ -44,7 +44,7 @@ parser.add_argument('--test', '-t', action='store_true', help='Test only flag.')
 parser.add_argument('--dataroot', default='.', type=str)
 # Acceleration
 parser.add_argument('--ngpu', type=int, default=1, help='0 = CPU.')
-parser.add_argument('--prefetch', type=int, default=4, help='Pre-fetching threads.')
+parser.add_argument('--prefetch', type=int, default=1, help='Pre-fetching threads.')
 args = parser.parse_args()
 
 state = {k: v for k, v in args._get_kwargs()}
