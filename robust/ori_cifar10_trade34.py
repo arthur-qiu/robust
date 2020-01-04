@@ -42,7 +42,7 @@ parser.add_argument('--widen-factor', default=10, type=int, help='widen factor')
 parser.add_argument('--droprate', default=0.0, type=float, help='dropout probability')
 # Checkpoints
 parser.add_argument('--save', '-s', type=str, default='./logs/cifar10_semidir', help='Folder to save checkpoints.')
-parser.add_argument('--load', '-l', type=str, default='./logs/cifar10_warm10k', help='Checkpoint path to resume / test.')
+parser.add_argument('--load', '-l', type=str, default='', help='Checkpoint path to resume / test.')
 parser.add_argument('--test', '-t', action='store_true', help='Test only flag.')
 parser.add_argument('--dataroot', default='.', type=str)
 # Acceleration
