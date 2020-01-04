@@ -11,7 +11,7 @@ import torchvision.datasets as dset
 import torch.nn.functional as F
 from tqdm import tqdm
 import json
-from . import robust_attacks
+import robust_attacks
 
 import sys
 sys.path.append('../')

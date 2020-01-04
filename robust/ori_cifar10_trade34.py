@@ -12,7 +12,7 @@ import torch.nn.functional as F
 from tqdm import tqdm
 import json
 from trades import trades_loss, kld_loss
-from . import robust_attacks
+import robust_attacks
 
 import sys
 sys.path.append('../')
