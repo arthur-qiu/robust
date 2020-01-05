@@ -11,7 +11,7 @@ import torchvision.datasets as dset
 import torch.nn.functional as F
 from tqdm import tqdm
 import json
-from trades import trades_loss, kld_loss
+from robust_trades import trades_loss, kld_loss
 import robust_attacks
 
 import sys
