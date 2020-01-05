@@ -140,7 +140,7 @@ def train():
     for bx, by in train_loader:
         bx, by = bx.cuda(), by.cuda()
 
-        net.eval()
+        # net.eval()
         loss = trades_loss(model=net,
                            x_natural=bx,
                            y=by,
@@ -150,7 +150,7 @@ def train():
                            perturb_steps=args.num_steps,
                            beta=6.0)
 
-        net.train()
+        # net.train()
 
 
         optimizer.zero_grad()
