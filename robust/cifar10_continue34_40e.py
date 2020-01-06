@@ -286,6 +286,7 @@ print('Beginning Training\n')
 epoch_step = json.loads(args.epoch_step)
 
 # Main loop
+best_test_accuracy = 0
 for epoch in range(start_epoch, args.epochs):
     state['epoch'] = epoch
 
@@ -307,6 +308,12 @@ for epoch in range(start_epoch, args.epochs):
         torch.save(net.state_dict(),
                    os.path.join(args.save, args.dataset + args.model +
                                 '_adv_epoch_' + str(epoch) + '.pt'))
+
+    if state['test_accuracy'] > best_test_accuracy:
+        best_test_accuracy = state['test_accuracy']
+        torch.save(net.state_dict(),
+                   os.path.join(args.save, args.dataset + args.model +
+                                '_best_adv_epoch.pt'))
 
     # # Let us not waste space and delete the previous model
     # prev_path = os.path.join(args.save, args.dataset + args.model +
