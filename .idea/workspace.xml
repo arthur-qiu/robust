@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/robust/cifar10_continue34_40e.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_continue34_40e.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robust/ori_cifar10_trade.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/ori_cifar10_trade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robust/ori_cifar10_trade34.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/ori_cifar10_trade34.py" afterDir="false" />
-    </list>
+    <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+            <state relative-caret-position="333">
+              <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -243,12 +239,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578146316030</updated>
-      <workItem from="1578146317387" duration="14398000" />
+      <workItem from="1578146317387" duration="14655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14398000" />
+    <option name="totallyTimeSpent" value="14655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="23" width="1400" height="877" extended-state="0" />
@@ -432,8 +428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+        <state relative-caret-position="333">
+          <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
         </state>
       </provider>
     </entry>
