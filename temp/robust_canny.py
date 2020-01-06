@@ -399,7 +399,7 @@ def vis_edge(images, sigma=1, high_threshold=0.2, low_threshold=0.1, thres=0.2):
 
         # img = img * 0.5 + 0.5
         img_gray = rgb2gray(img)
-        edge, vis1, vis2, vis3, vis4, vis5 = vis_canny(np.array(img_gray), sigma=sigma, high_threshold=high_threshold, low_threshold=low_threshold, thres=thres).astype(np.float)
+        edge, vis1, vis2, vis3, vis4, vis5 = vis_canny(np.array(img_gray), sigma=sigma, high_threshold=high_threshold, low_threshold=low_threshold, thres=thres)
         # edge = (edge - 0.5) / 0.5
         edges.append([edge])
         vis1s.append([vis1])

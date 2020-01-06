@@ -46,13 +46,16 @@ parser.add_argument('--dataroot', default='.', type=str)
 # Acceleration
 parser.add_argument('--ngpu', type=int, default=1, help='0 = CPU.')
 parser.add_argument('--prefetch', type=int, default=1, help='Pre-fetching threads.')
+
+parser.add_argument('--random_seed', type=int, default=1)
+
 args = parser.parse_args()
 
 state = {k: v for k, v in args._get_kwargs()}
 print(state)
 
-torch.manual_seed(1)
-np.random.seed(1)
+torch.manual_seed(args.random_seed)
+np.random.seed(args.random_seed)
 
 # # mean and standard deviation of channels of CIFAR-10 images
 # mean = [x / 255 for x in [125.3, 123.0, 113.9]]
@@ -110,7 +113,7 @@ if args.load != '':
 
 if args.ngpu > 0:
     net.cuda()
-    torch.cuda.manual_seed(1)
+    torch.cuda.manual_seed(args.random_seed)
 
 cudnn.benchmark = True  # fire on all cylinders
 

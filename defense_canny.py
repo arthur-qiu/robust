@@ -479,8 +479,8 @@ def test_in_testset():
 
 
 if args.test:
-    vis_test()
-    # test_in_testset()
+    # vis_test()
+    test_in_testset()
     print(state)
     exit()
 
