@@ -34,7 +34,7 @@ parser.add_argument('--momentum', type=float, default=0.9, help='Momentum.')
 parser.add_argument('--decay', '-d', type=float, default=0.0005, help='Weight decay (L2 penalty).')
 parser.add_argument('--epoch_step', default='[32,34,36,38]', type=str,
                     help='json list with epochs to drop lr on')
-parser.add_argument('--lr_decay_ratio', default=0.5, type=float)
+parser.add_argument('--lr_decay_ratio', default=0.2, type=float)
 # WRN Architecture
 parser.add_argument('--layers', default=34, type=int, help='total number of layers')
 parser.add_argument('--widen-factor', default=10, type=int, help='widen factor')
