@@ -328,7 +328,7 @@ for epoch in range(0, args.epochs):
         optimizer = torch.optim.SGD(
             net.parameters(), lr, momentum=state['momentum'],
             weight_decay=state['decay'], nesterov=True)
-        print('At epoch: ' + str(epoch) + ', lr: ' + str(lr))
+        print('At epoch: ' + str(epoch) + ', lr: ' + str(lr+1))
 
     train()
     test()
