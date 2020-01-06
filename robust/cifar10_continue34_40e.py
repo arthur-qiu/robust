@@ -283,7 +283,7 @@ print('Beginning Training\n')
 epoch_step = json.loads(args.epoch_step)
 
 # Main loop
-for epoch in range(0, args.epochs):
+for epoch in range(start_epoch, args.epochs):
     state['epoch'] = epoch
 
     begin_epoch = time.time()

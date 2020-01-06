@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/defense_canny.py" beforeDir="false" afterPath="$PROJECT_DIR$/defense_canny.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robust/cifar10_adv34.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_adv34.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robust/cifar10_continue34_60e.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_continue34_60e.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robust/cifar10_warm34.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_warm34.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robust/ori_cifar10_trade.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/ori_cifar10_trade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robust/ori_cifar10_trade34.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/ori_cifar10_trade34.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/robust_canny.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/robust_canny.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robust/cifar10_continue34_40e.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_continue34_40e.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +23,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="269" lean-forward="true" selection-start-line="269" selection-end-line="269" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -98,7 +96,6 @@
       <find>dataset</find>
       <find>2\*</find>
       <find>optimizer</find>
-      <find>start_epoch</find>
       <find>adversary</find>
       <find>random</find>
       <find>seed</find>
@@ -107,6 +104,7 @@
       <find>if epoch in epoch_step:</find>
       <find>seed\(</find>
       <find>args.random_seed</find>
+      <find>start_epoch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,6 +124,7 @@
         <option value="$PROJECT_DIR$/robust/cifar10_warm34.py" />
         <option value="$PROJECT_DIR$/robust/ori_cifar10_trade.py" />
         <option value="$PROJECT_DIR$/robust/ori_cifar10_trade34.py" />
+        <option value="$PROJECT_DIR$/robust/cifar10_continue34_40e.py" />
       </list>
     </option>
   </component>
@@ -200,15 +199,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578146316030</updated>
-      <workItem from="1578146317387" duration="9790000" />
+      <workItem from="1578146317387" duration="10442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9790000" />
+    <option name="totallyTimeSpent" value="10442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1400" height="867" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496318" />
@@ -387,7 +387,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="269" lean-forward="true" selection-start-line="269" selection-end-line="269" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
