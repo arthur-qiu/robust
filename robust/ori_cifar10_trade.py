@@ -103,16 +103,23 @@ if args.ngpu > 0:
 
 # Restore model if desired
 if args.load != '':
-    for i in range(300 - 1, -1, -1):
-        model_name = os.path.join(args.load, args.dataset + args.model +
-                                  '_epoch_' + str(i) + '.pt')
-        if os.path.isfile(model_name):
-            net.load_state_dict(torch.load(model_name))
-            print('Model restored! Epoch:', i)
-            start_epoch = i + 1
-            break
-    if start_epoch == 0:
-        assert False, "could not resume"
+    if args.test and os.path.isfile(args.load):
+        net.load_state_dict(torch.load(args.load))
+        print('Appointed Model Restored!')
+    else:
+        for i in range(100 - 1, -1, -1):
+            # model_name = os.path.join(args.load, args.dataset + args.model +
+            #                           '_baseline_epoch_' + str(i) + '.pt')
+            model_name = os.path.join(args.load, args.dataset + args.model +
+                                      '_epoch_' + str(i) + '.pt')
+
+            if os.path.isfile(model_name):
+                net.load_state_dict(torch.load(model_name))
+                print('Model restored! Epoch:', i)
+                start_epoch = i + 1
+                break
+        if start_epoch == 0:
+            assert False, "could not resume"
 
 # net.module.fc = nn.Linear(640, num_classes)
 
