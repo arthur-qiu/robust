@@ -260,6 +260,48 @@ def test_in_testset():
     state['adv_test_loss'] = adv_loss_avg / len(test_loader)
     state['adv_test_accuracy'] = adv_correct / len(test_loader.dataset)
 
+def test_in_trainset():
+    train_loader = torch.utils.data.DataLoader(
+    train_data, batch_size=args.test_bs, shuffle=False,
+    num_workers=args.prefetch, pin_memory=torch.cuda.is_available())
+    net.eval()
+    loss_avg = 0.0
+    correct = 0
+    adv_loss_avg = 0.0
+    adv_correct = 0
+    with torch.no_grad():
+        for data, target in train_loader:
+            data, target = data.cuda(), target.cuda()
+
+            adv_data = adversary(net, data, target)
+
+            # forward
+            output = net(data)
+            loss = F.cross_entropy(output, target)
+
+            # accuracy
+            pred = output.data.max(1)[1]
+            correct += pred.eq(target.data).sum().item()
+
+            # test loss average
+            loss_avg += float(loss.data)
+
+            # forward
+            adv_output = net(adv_data)
+            adv_loss = F.cross_entropy(adv_output, target)
+
+            # accuracy
+            adv_pred = adv_output.data.max(1)[1]
+            adv_correct += adv_pred.eq(target.data).sum().item()
+
+            # test loss average
+            adv_loss_avg += float(adv_loss.data)
+
+    state['train_loss'] = loss_avg / len(train_loader)
+    state['train_accuracy'] = correct / len(train_loader.dataset)
+    state['adv_train_loss'] = adv_loss_avg / len(train_loader)
+    state['adv_train_accuracy'] = adv_correct / len(train_loader.dataset)
+
 # def robust_test():
 #     net.eval()
 #     loss_avg = 0.0

@@ -238,9 +238,8 @@ def test_in_testset():
 
 def test_in_trainset():
     train_loader = torch.utils.data.DataLoader(
-        dset.ImageFolder(args.dataroot + '/cinic-10-cifar/train10k', transform=test_transform),
-        batch_size=args.batch_size // 2, shuffle=True,
-        num_workers=args.prefetch, pin_memory=torch.cuda.is_available())
+    train_data, batch_size=args.test_bs, shuffle=False,
+    num_workers=args.prefetch, pin_memory=torch.cuda.is_available())
     net.eval()
     loss_avg = 0.0
     correct = 0

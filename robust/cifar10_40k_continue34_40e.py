@@ -26,13 +26,13 @@ parser.add_argument('--dataset', type=str, default='cifar10', choices=['cifar10'
 parser.add_argument('--model', '-m', type=str, default='wrn',
                     choices=['allconv', 'wrn'], help='Choose architecture.')
 # Optimization options
-parser.add_argument('--epochs', '-e', type=int, default=60, help='Number of epochs to train.')
-parser.add_argument('--learning_rate', '-lr', type=float, default=0.1, help='The initial learning rate.')
+parser.add_argument('--epochs', '-e', type=int, default=40, help='Number of epochs to train.')
+parser.add_argument('--learning_rate', '-lr', type=float, default=0.02, help='The initial learning rate.')
 parser.add_argument('--batch_size', '-b', type=int, default=128, help='Batch size.')
 parser.add_argument('--test_bs', type=int, default=128)
 parser.add_argument('--momentum', type=float, default=0.9, help='Momentum.')
 parser.add_argument('--decay', '-d', type=float, default=0.0005, help='Weight decay (L2 penalty).')
-parser.add_argument('--epoch_step', default='[30,40,50]', type=str,
+parser.add_argument('--epoch_step', default='[32,34,36,38]', type=str,
                     help='json list with epochs to drop lr on')
 parser.add_argument('--lr_decay_ratio', default=0.2, type=float)
 # WRN Architecture
@@ -72,21 +72,28 @@ train_transform = trn.Compose([trn.RandomHorizontalFlip(), trn.RandomCrop(32, pa
                                trn.ToTensor()])
 test_transform = trn.Compose([trn.ToTensor()])
 
-if args.dataset == 'cifar10':
-    train_data = dset.CIFAR10(args.dataroot, train=True, transform=train_transform)
-    test_data = dset.CIFAR10(args.dataroot, train=False, transform=test_transform)
-    num_classes = 10
-else:
-    train_data = dset.CIFAR100(args.dataroot, train=True, transform=train_transform)
-    test_data = dset.CIFAR100(args.dataroot, train=False, transform=test_transform)
-    num_classes = 100
-
+# if args.dataset == 'cifar10':
+#     train_data = dset.CIFAR10(args.dataroot, train=True, transform=train_transform)
+#     test_data = dset.CIFAR10(args.dataroot, train=False, transform=test_transform)
+#     num_classes = 10
+# else:
+#     train_data = dset.CIFAR100(args.dataroot, train=True, transform=train_transform)
+#     test_data = dset.CIFAR100(args.dataroot, train=False, transform=test_transform)
+#     num_classes = 100
+#
+#
+# train_loader = torch.utils.data.DataLoader(
+#     train_data, batch_size=args.batch_size, shuffle=True,
+#     num_workers=args.prefetch, pin_memory=torch.cuda.is_available())
+# test_loader = torch.utils.data.DataLoader(
+#     test_data, batch_size=args.test_bs, shuffle=False,
+#     num_workers=args.prefetch, pin_memory=torch.cuda.is_available())
 
 train_loader = torch.utils.data.DataLoader(
-    train_data, batch_size=args.batch_size, shuffle=True,
+    dset.ImageFolder(args.dataroot+'/cifar_divided/train40k', transform=train_transform), batch_size=args.batch_size, shuffle=True,
     num_workers=args.prefetch, pin_memory=torch.cuda.is_available())
 test_loader = torch.utils.data.DataLoader(
-    test_data, batch_size=args.test_bs, shuffle=False,
+    dset.ImageFolder(args.dataroot+'/cifar_divided/train10k', transform=test_transform), batch_size=args.test_bs, shuffle=False,
     num_workers=args.prefetch, pin_memory=torch.cuda.is_available())
 
 # Create model
@@ -102,16 +109,23 @@ if args.ngpu > 0:
 
 # Restore model if desired
 if args.load != '':
-    for i in range(300 - 1, -1, -1):
-        model_name = os.path.join(args.load, args.dataset + args.model +
-                                  '_baseline_epoch_' + str(i) + '.pt')
-        if os.path.isfile(model_name):
-            net.load_state_dict(torch.load(model_name))
-            print('Model restored! Epoch:', i)
-            start_epoch = i + 1
-            break
-    if start_epoch == 0:
-        assert False, "could not resume"
+    if args.test and os.path.isfile(args.load):
+        net.load_state_dict(torch.load(args.load))
+        print('Appointed Model Restored!')
+    else:
+        for i in range(30 - 1, -1, -1):
+            # model_name = os.path.join(args.load, args.dataset + args.model +
+            #                           '_baseline_epoch_' + str(i) + '.pt')
+            model_name = os.path.join(args.load, args.dataset + args.model +
+                                      '_adv_epoch_' + str(i) + '.pt')
+
+            if os.path.isfile(model_name):
+                net.load_state_dict(torch.load(model_name))
+                print('Model restored! Epoch:', i)
+                start_epoch = i + 1
+                break
+        if start_epoch == 0:
+            assert False, "could not resume"
 
 # net.module.fc = nn.Linear(640, num_classes)
 
@@ -325,7 +339,8 @@ print('Beginning Training\n')
 epoch_step = json.loads(args.epoch_step)
 
 # Main loop
-for epoch in range(0, args.epochs):
+best_test_accuracy = 0
+for epoch in range(start_epoch, args.epochs):
     state['epoch'] = epoch
 
     begin_epoch = time.time()
@@ -346,6 +361,12 @@ for epoch in range(0, args.epochs):
         torch.save(net.state_dict(),
                    os.path.join(args.save, args.dataset + args.model +
                                 '_adv_epoch_' + str(epoch) + '.pt'))
+
+    if state['test_accuracy'] > best_test_accuracy:
+        best_test_accuracy = state['test_accuracy']
+        torch.save(net.state_dict(),
+                   os.path.join(args.save, args.dataset + args.model +
+                                '_best_adv_epoch.pt'))
 
     # # Let us not waste space and delete the previous model
     # prev_path = os.path.join(args.save, args.dataset + args.model +
