@@ -89,6 +89,7 @@ test_transform = trn.Compose([trn.ToTensor()])
 #     test_data, batch_size=args.test_bs, shuffle=False,
 #     num_workers=args.prefetch, pin_memory=torch.cuda.is_available())
 
+
 train_loader = torch.utils.data.DataLoader(
     dset.ImageFolder(args.dataroot+'/cifar_divided/train40k', transform=train_transform), batch_size=args.batch_size, shuffle=True,
     num_workers=args.prefetch, pin_memory=torch.cuda.is_available())
