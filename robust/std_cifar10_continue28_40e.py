@@ -151,7 +151,7 @@ optimizer = torch.optim.SGD(
 #
 #
 adversary_train = robust_attacks.PGD(epsilon=args.epsilon, num_steps=args.num_steps, step_size=args.step_size).cuda()
-adversary = robust_attacks.PGD(epsilon=8/255, num_steps=20, step_size=2/255).cuda()
+adversary = robust_attacks.PGD(epsilon=8/255, num_steps=10, step_size=2/255).cuda()
 
 # /////////////// Training ///////////////
 
