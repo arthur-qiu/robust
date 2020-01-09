@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/robust/cifar10_40k_continue34_40e.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_40k_continue34_40e.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robust/std_cifar10_continue28_40e.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/std_cifar10_continue28_40e.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_warm34.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
+            <state relative-caret-position="-1200">
               <caret line="66" selection-start-line="66" selection-end-line="66" />
             </state>
           </provider>
@@ -57,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robust/std_cifar10_continue28_40e.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="153" column="57" selection-start-line="153" selection-start-column="57" selection-end-line="153" selection-end-column="57" />
+            <state relative-caret-position="252">
+              <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -102,8 +104,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_continue34_40e.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+            <state relative-caret-position="532">
+              <caret line="257" column="88" selection-start-line="257" selection-start-column="88" selection-end-line="257" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="250" column="88" selection-start-line="250" selection-start-column="88" selection-end-line="250" selection-end-column="88" />
             </state>
           </provider>
         </entry>
@@ -162,12 +173,12 @@
         <option value="$PROJECT_DIR$/robust/cifar10_mixup_continue34_60e.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_mixup_adv34.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_adv34.py" />
-        <option value="$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py" />
-        <option value="$PROJECT_DIR$/robust/cifar10_40k_continue34_40e.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_continue34_60e.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_continue34_40e.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_warm28.py" />
         <option value="$PROJECT_DIR$/robust/std_cifar10_continue28_40e.py" />
+        <option value="$PROJECT_DIR$/robust/cifar10_40k_continue34_40e.py" />
+        <option value="$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py" />
       </list>
     </option>
   </component>
@@ -233,12 +244,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578146316030</updated>
-      <workItem from="1578146317387" duration="29087000" />
+      <workItem from="1578146317387" duration="29482000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29087000" />
+    <option name="totallyTimeSpent" value="29482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-160" y="-990" width="1400" height="877" extended-state="0" />
@@ -417,20 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="92" selection-start-line="92" selection-end-line="97" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_continue34_40e.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robust/robust_trades.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
@@ -448,13 +445,6 @@
           <folding>
             <element signature="e#24#42#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_warm34.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
@@ -502,10 +492,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_continue34_40e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="257" column="88" selection-start-line="257" selection-start-column="88" selection-end-line="257" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="250" column="88" selection-start-line="250" selection-start-column="88" selection-end-line="250" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_warm34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1200">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/robust/std_cifar10_continue28_40e.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="153" column="57" selection-start-line="153" selection-start-column="57" selection-end-line="153" selection-end-column="57" />
+        <state relative-caret-position="252">
+          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
         </state>
       </provider>
     </entry>

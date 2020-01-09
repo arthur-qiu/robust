@@ -27,12 +27,12 @@ parser.add_argument('--model', '-m', type=str, default='wrn',
                     choices=['allconv', 'wrn'], help='Choose architecture.')
 # Optimization options
 parser.add_argument('--epochs', '-e', type=int, default=40, help='Number of epochs to train.')
-parser.add_argument('--learning_rate', '-lr', type=float, default=0.02, help='The initial learning rate.')
+parser.add_argument('--learning_rate', '-lr', type=float, default=0.1, help='The initial learning rate.')
 parser.add_argument('--batch_size', '-b', type=int, default=128, help='Batch size.')
 parser.add_argument('--test_bs', type=int, default=128)
 parser.add_argument('--momentum', type=float, default=0.9, help='Momentum.')
 parser.add_argument('--decay', '-d', type=float, default=0.0005, help='Weight decay (L2 penalty).')
-parser.add_argument('--epoch_step', default='[32,34,36,38]', type=str,
+parser.add_argument('--epoch_step', default='[30,32,34,36,38]', type=str,
                     help='json list with epochs to drop lr on')
 parser.add_argument('--lr_decay_ratio', default=0.2, type=float)
 # WRN Architecture
@@ -106,7 +106,7 @@ if args.load != '':
         net.load_state_dict(torch.load(args.load))
         print('Appointed Model Restored!')
     else:
-        for i in range(30 - 1, -1, -1):
+        for i in range(300 - 1, -1, -1):
             # model_name = os.path.join(args.load, args.dataset + args.model +
             #                           '_baseline_epoch_' + str(i) + '.pt')
             model_name = os.path.join(args.load, args.dataset + args.model +
