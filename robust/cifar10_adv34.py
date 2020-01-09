@@ -104,7 +104,7 @@ if args.ngpu > 0:
 if args.load != '':
     for i in range(300 - 1, -1, -1):
         model_name = os.path.join(args.load, args.dataset + args.model +
-                                  '_baseline_epoch_' + str(i) + '.pt')
+                                  '_adv_epoch_' + str(i) + '.pt')
         if os.path.isfile(model_name):
             net.load_state_dict(torch.load(model_name))
             print('Model restored! Epoch:', i)
