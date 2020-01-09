@@ -36,7 +36,7 @@ parser.add_argument('--epoch_step', default='[32,34,36,38]', type=str,
                     help='json list with epochs to drop lr on')
 parser.add_argument('--lr_decay_ratio', default=0.2, type=float)
 # WRN Architecture
-parser.add_argument('--layers', default=34, type=int, help='total number of layers')
+parser.add_argument('--layers', default=28, type=int, help='total number of layers')
 parser.add_argument('--widen-factor', default=10, type=int, help='widen factor')
 parser.add_argument('--droprate', default=0.0, type=float, help='dropout probability')
 # Checkpoints
@@ -48,11 +48,11 @@ parser.add_argument('--dataroot', default='.', type=str)
 parser.add_argument('--ngpu', type=int, default=1, help='0 = CPU.')
 parser.add_argument('--prefetch', type=int, default=1, help='Pre-fetching threads.')
 
-parser.add_argument('--epsilon', default=0.031,
+parser.add_argument('--epsilon', default=8/255,
                     help='perturbation')
 parser.add_argument('--num_steps', default=10,
                     help='perturb number of steps')
-parser.add_argument('--step_size', default=0.007,
+parser.add_argument('--step_size', default=2/255,
                     help='perturb step size')
 parser.add_argument('--random_seed', type=int, default=1)
 
@@ -151,7 +151,7 @@ optimizer = torch.optim.SGD(
 #
 #
 adversary_train = robust_attacks.PGD(epsilon=args.epsilon, num_steps=args.num_steps, step_size=args.step_size).cuda()
-adversary = robust_attacks.PGD(epsilon=0.031, num_steps=20, step_size=0.003).cuda()
+adversary = robust_attacks.PGD(epsilon=8/255, num_steps=20, step_size=2/255).cuda()
 
 # /////////////// Training ///////////////
 
@@ -286,30 +286,6 @@ def test_in_trainset():
     state['train_accuracy'] = correct / len(train_loader.dataset)
     state['adv_train_loss'] = adv_loss_avg / len(train_loader)
     state['adv_train_accuracy'] = adv_correct / len(train_loader.dataset)
-
-# def robust_test():
-#     net.eval()
-#     loss_avg = 0.0
-#     correct = 0
-#     with torch.no_grad():
-#         for data, target in test_loader:
-#             data, target = data.cuda(), target.cuda()
-#
-#             data = adversary(net, data, target)
-#
-#             # forward
-#             output = net(data)
-#             loss = F.cross_entropy(output, target)
-#
-#             # accuracy
-#             pred = output.data.max(1)[1]
-#             correct += pred.eq(target.data).sum().item()
-#
-#             # test loss average
-#             loss_avg += float(loss.data)
-#
-#     state['robust_test_loss'] = loss_avg / len(test_loader)
-#     state['robust_test_accuracy'] = correct / len(test_loader.dataset)
 
 
 if args.test:
