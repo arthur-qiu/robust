@@ -48,11 +48,11 @@ parser.add_argument('--dataroot', default='.', type=str)
 parser.add_argument('--ngpu', type=int, default=1, help='0 = CPU.')
 parser.add_argument('--prefetch', type=int, default=1, help='Pre-fetching threads.')
 
-parser.add_argument('--epsilon', default=0.031,
+parser.add_argument('--epsilon', type=float, default=0.031,
                     help='perturbation')
-parser.add_argument('--num_steps', default=10,
+parser.add_argument('--num_steps', type=int, default=10,
                     help='perturb number of steps')
-parser.add_argument('--step_size', default=0.007,
+parser.add_argument('--step_size', type=float, default=0.007,
                     help='perturb step size')
 parser.add_argument('--random_seed', type=int, default=1)
 
