@@ -310,7 +310,8 @@ epoch_step = json.loads(args.epoch_step)
 
 # Main loop
 best_test_accuracy = 0
-for epoch in range(start_epoch, args.epochs):
+# for epoch in range(start_epoch, args.epochs):
+for epoch in range(0, args.epochs):
     state['epoch'] = epoch
 
     begin_epoch = time.time()
