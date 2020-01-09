@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="" />
+    <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/robust/cifar10_adv34.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_adv34.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade34.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="306">
+              <caret line="307" column="14" selection-start-line="307" selection-start-column="14" selection-end-line="307" selection-end-column="14" />
               <folding>
                 <element signature="e#24#42#0" expanded="true" />
               </folding>
@@ -70,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robust/cifar10_adv34.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
+            <state relative-caret-position="232">
+              <caret line="309" column="22" selection-start-line="309" selection-start-column="22" selection-end-line="309" selection-end-column="22" />
               <folding>
                 <element signature="e#24#42#0" expanded="true" />
               </folding>
@@ -174,7 +176,6 @@
         <option value="$PROJECT_DIR$/robust/cifar10_40k_warm34.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_mixup_warm34.py" />
         <option value="$PROJECT_DIR$/robust/robust_attacks.py" />
-        <option value="$PROJECT_DIR$/robust/ori_cifar10_trade34.py" />
         <option value="$PROJECT_DIR$/robust/ori_cifar10_trade.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_mixup_continue34_60e.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_mixup_adv34.py" />
@@ -184,6 +185,7 @@
         <option value="$PROJECT_DIR$/robust/std_cifar10_continue28_40e.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_40k_continue34_40e.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py" />
+        <option value="$PROJECT_DIR$/robust/ori_cifar10_trade34.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_adv34.py" />
       </list>
     </option>
@@ -255,12 +257,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578146316030</updated>
-      <workItem from="1578146317387" duration="32513000" />
+      <workItem from="1578146317387" duration="32731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32513000" />
+    <option name="totallyTimeSpent" value="32731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-160" y="-990" width="1400" height="877" extended-state="0" />
@@ -510,16 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv34.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/wrn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -542,8 +534,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade34.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="29" />
+        <state relative-caret-position="306">
+          <caret line="307" column="14" selection-start-line="307" selection-start-column="14" selection-end-line="307" selection-end-column="14" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="309" column="22" selection-start-line="309" selection-start-column="22" selection-end-line="309" selection-end-column="22" />
           <folding>
             <element signature="e#24#42#0" expanded="true" />
           </folding>
