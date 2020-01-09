@@ -110,7 +110,7 @@ if args.load != '':
             # model_name = os.path.join(args.load, args.dataset + args.model +
             #                           '_baseline_epoch_' + str(i) + '.pt')
             model_name = os.path.join(args.load, args.dataset + args.model +
-                                      '_adv_epoch_' + str(i) + '.pt')
+                                      '_baseline_epoch_' + str(i) + '.pt')
 
             if os.path.isfile(model_name):
                 net.load_state_dict(torch.load(model_name))
