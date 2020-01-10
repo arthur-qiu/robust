@@ -1,6 +1,7 @@
 import numpy as np
 import scipy.ndimage as ndi
 from scipy.ndimage import generate_binary_structure, binary_erosion, label
+from torch.autograd import Function
 
 import skimage
 import skimage.io
@@ -14,6 +15,19 @@ import torch.nn as nn
 import torch.nn.functional as F
 from scipy.ndimage.filters import _gaussian_kernel1d
 
+class ThresholdF(Function):
+    def __init__(self, threshold):
+        super(ThresholdF, self).__init__()
+        self.threshold = threshold
+
+    def forward(self, input):
+        self.save_for_backward(input)
+        a = torch.zeros_like(input)
+        output = torch.where(input < self.threshold, a, input)
+        return output
+
+    def backward(self, output_grad):
+        return output_grad
 
 class Canny_Net(nn.Module):
     def __init__(self, sigma=1.0, high_threshold=0.2, low_threshold=0.1, thres = 0.3, use_quantiles=False):
@@ -43,6 +57,7 @@ class Canny_Net(nn.Module):
         self.eps = 1e-9  # add to sqrt() to prevent nan grad
         self.gamma = 0.005  # margin
         self.thres = thres
+        self.TF = ThresholdF(thres)
 
     def gaussian(self, x):
         # x.shape: [N, C, H, W] (?, 1, 32, 32)
@@ -117,6 +132,7 @@ class Canny_Net(nn.Module):
         abs_jsobel = torch.abs(jsobel)
         magnitude2 = isobel ** 2 + jsobel ** 2
         magnitude = torch.sqrt(magnitude2 + self.eps)
+        magnitude = self.TF(magnitude)
         # magnitude[magnitude < self.thres] = 0.
 
         # L186-L188
@@ -296,7 +312,7 @@ class Canny_Net(nn.Module):
         abs_jsobel = torch.abs(jsobel)
         magnitude2 = isobel ** 2 + jsobel ** 2
         magnitude = torch.sqrt(magnitude2 + self.eps)
-        magnitude[magnitude < self.thres] = 0.
+        magnitude = self.TF()
 
         vis2 = magnitude.clone().detach()
 

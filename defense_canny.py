@@ -119,7 +119,7 @@ if args.load != '':
 #if args.ngpu > 1:
 #    net = torch.nn.DataParallel(net, device_ids=list(range(args.ngpu)))
 
-canny_net = Canny_Net()
+canny_net = Canny_Net(args.sigma, args.high_threshold, args.low_threshold, args.robust_threshold)
 
 if args.ngpu > 0:
     net.cuda()
