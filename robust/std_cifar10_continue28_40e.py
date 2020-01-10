@@ -54,6 +54,10 @@ parser.add_argument('--num_steps', type=int, default=10,
                     help='perturb number of steps')
 parser.add_argument('--step_size', type=float, default=2/255,
                     help='perturb step size')
+parser.add_argument('--test_num_steps', type=int, default=10,
+                    help='test perturb number of steps')
+parser.add_argument('--test_step_size', type=float, default=2/255,
+                    help='test perturb step size')
 parser.add_argument('--random_seed', type=int, default=1)
 
 args = parser.parse_args()
@@ -151,7 +155,7 @@ optimizer = torch.optim.SGD(
 #
 #
 adversary_train = robust_attacks.PGD(epsilon=args.epsilon, num_steps=args.num_steps, step_size=args.step_size).cuda()
-adversary = robust_attacks.PGD(epsilon=8/255, num_steps=10, step_size=2/255).cuda()
+adversary = robust_attacks.PGD(epsilon=args.epsilon, num_steps=args.test_num_steps, step_size=args.test_step_size).cuda()
 
 # /////////////// Training ///////////////
 
