@@ -294,7 +294,7 @@ def test_in_trainset():
 
 if args.test:
     test_in_testset()
-    test_in_trainset()
+    # test_in_trainset()
     print(state)
     exit()
 
