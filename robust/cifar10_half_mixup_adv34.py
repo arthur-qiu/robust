@@ -45,13 +45,13 @@ parser.add_argument('--dataset', type=str, default='cifar10', choices=['cifar10'
 parser.add_argument('--model', '-m', type=str, default='wrn',
                     choices=['allconv', 'wrn'], help='Choose architecture.')
 # Optimization options
-parser.add_argument('--epochs', '-e', type=int, default=200, help='Number of epochs to train.')
+parser.add_argument('--epochs', '-e', type=int, default=100, help='Number of epochs to train.')
 parser.add_argument('--learning_rate', '-lr', type=float, default=0.1, help='The initial learning rate.')
 parser.add_argument('--batch_size', '-b', type=int, default=128, help='Batch size.')
 parser.add_argument('--test_bs', type=int, default=128)
 parser.add_argument('--momentum', type=float, default=0.9, help='Momentum.')
 parser.add_argument('--decay', '-d', type=float, default=0.0002, help='Weight decay (L2 penalty).')
-parser.add_argument('--epoch_step', default='[100,150]', type=str,
+parser.add_argument('--epoch_step', default='[60,90]', type=str,
                     help='json list with epochs to drop lr on')
 parser.add_argument('--lr_decay_ratio', default=0.1, type=float)
 # WRN Architecture
@@ -169,6 +169,7 @@ optimizer = torch.optim.SGD(
 #
 #
 mixup_adversary_train = robust_attacks.MIX_PGD(epsilon=args.epsilon, num_steps=args.num_steps, step_size=args.step_size).cuda()
+adversary_train = robust_attacks.PGD(epsilon=args.epsilon, num_steps=args.num_steps, step_size=args.step_size).cuda()
 adversary = robust_attacks.PGD(epsilon=0.031, num_steps=20, step_size=0.003).cuda()
 
 # /////////////// Training ///////////////
@@ -180,8 +181,14 @@ def train():
     for bx, by in train_loader:
         bx, by = bx.cuda(), by.cuda()
 
-        bx, by_a, by_b, lam = mixup_data(bx, by, args.alpha, args.ngpu > 0)
-        adv_bx = mixup_adversary_train(net, bx, by, by_a, by_b, lam)
+        half_len = by.shape[0] // 2
+
+        adv_bx_pure = adversary_train(net, bx[:half_len], by[:half_len])
+
+        bx[half_len:], by_a, by_b, lam = mixup_data(bx[half_len:], by[half_len:], args.alpha, args.ngpu > 0)
+        adv_bx_mix = mixup_adversary_train(net, bx[half_len:], by[half_len:], by_a, by_b, lam)
+
+        adv_bx = torch.cat([adv_bx_pure, adv_bx_mix], 0)
 
         # forward
         logits = net(adv_bx)
@@ -189,8 +196,9 @@ def train():
         # backward
         # scheduler.step()
         optimizer.zero_grad()
-        # loss = F.cross_entropy(logits, by)
-        loss = mixup_criterion(F.cross_entropy, logits, by_a, by_b, lam)
+        loss_pure = F.cross_entropy(logits[:half_len], by[:half_len])
+        loss_mix = mixup_criterion(F.cross_entropy, logits[half_len:], by_a, by_b, lam)
+        loss = (loss_pure + loss_mix) / 2
         loss.backward()
         optimizer.step()
 

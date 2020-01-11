@@ -185,7 +185,8 @@ def train():
         # backward
         # scheduler.step()
         optimizer.zero_grad()
-        loss = F.cross_entropy(logits, by)
+        # loss = F.cross_entropy(logits, by)
+        loss = mixup_criterion(F.cross_entropy, logits, by_a, by_b, lam)
         loss.backward()
         optimizer.step()
 
