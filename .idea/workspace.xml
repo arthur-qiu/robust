@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/robust/cifar10_eval34_40e.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/resnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/resnet_v2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/robust/cifar10_adv_resnet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/gaussian.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/gaussian.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,30 +40,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/attacks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="64" column="67" lean-forward="true" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trades.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robust/cifar10_adv34.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
@@ -86,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
+            <state relative-caret-position="477">
               <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
             </state>
           </provider>
@@ -98,29 +75,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robust/cifar10_eval34_40e.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="4845">
+              <caret line="337" lean-forward="true" selection-start-line="337" selection-end-line="337" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/gaussian.py">
+        <entry file="file://$PROJECT_DIR$/models/resnet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="39" selection-start-line="39" selection-start-column="2" selection-end-line="43" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/temp/canny.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="92" column="35" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="35" />
+            <state relative-caret-position="135">
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="42" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/resnet_v2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="30" column="42" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="42" />
+              <folding>
+                <element signature="e#997#1009#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/robust/cifar10_adv_resnet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="96" column="70" selection-start-line="96" selection-start-column="70" selection-end-line="96" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -136,8 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>model\(</find>
-      <find>dataset</find>
       <find>2\*</find>
       <find>optimizer</find>
       <find>random</find>
@@ -166,6 +153,8 @@
       <find>get_edge</find>
       <find>adversary</find>
       <find>epsilon</find>
+      <find>net</find>
+      <find>load_state_dict_from_url</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -201,12 +190,16 @@
         <option value="$PROJECT_DIR$/attacks.py" />
         <option value="$PROJECT_DIR$/scripts/gaussian.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_eval34_40e.py" />
+        <option value="$PROJECT_DIR$/models/resnet.py" />
+        <option value="$PROJECT_DIR$/models/another_resnet.py" />
+        <option value="$PROJECT_DIR$/robust/cifar10_adv_resnet.py" />
+        <option value="$PROJECT_DIR$/models/resnet_v3.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="66" />
-    <option name="y" value="-905" />
+    <option name="x" value="-180" />
+    <option name="y" value="-902" />
     <option name="width" value="1608" />
     <option name="height" value="877" />
   </component>
@@ -222,6 +215,11 @@
             <path>
               <item name="adversarial" type="b2602c69:ProjectViewProjectNode" />
               <item name="adversarial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adversarial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adversarial" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="adversarial" type="b2602c69:ProjectViewProjectNode" />
@@ -307,15 +305,15 @@
       <updated>1578146316030</updated>
       <workItem from="1578146317387" duration="47702000" />
       <workItem from="1578736615361" duration="9722000" />
-      <workItem from="1578842431926" duration="4267000" />
+      <workItem from="1578842431926" duration="6346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61691000" />
+    <option name="totallyTimeSpent" value="63770000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="-905" width="1608" height="877" extended-state="0" />
+    <frame x="-180" y="-902" width="1608" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22158365" />
@@ -643,6 +641,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_60e.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="671">
@@ -655,15 +660,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/robust/cifar10_eval34_40e.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="4845">
+          <caret line="337" lean-forward="true" selection-start-line="337" selection-end-line="337" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
+    <entry file="file://$PROJECT_DIR$/models/resnet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+        <state relative-caret-position="135">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/resnet_v3.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/resnet_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="42" />
+          <folding>
+            <element signature="e#997#1009#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv_resnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="96" column="70" selection-start-line="96" selection-start-column="70" selection-end-line="96" selection-end-column="80" />
         </state>
       </provider>
     </entry>
