@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/robust/cifar10_half_mixup_adv34.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/robust/cifar10_eval34_40e.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robust/cifar10_mixup_adv34.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_mixup_adv34.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robust/cifar10_mixup_continue34_60e.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_mixup_continue34_60e.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/gaussian.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/gaussian.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,24 +13,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/defense_canny.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="907">
-              <caret line="348" column="60" selection-start-line="348" selection-start-column="60" selection-end-line="348" selection-end-column="60" />
-              <folding>
-                <element signature="e#24#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp/canny_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1015">
-              <caret line="495" column="60" selection-start-line="495" selection-start-column="60" selection-end-line="495" selection-end-column="60" />
+            <state relative-caret-position="-2850">
+              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -40,10 +27,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robust/robust_trades.py">
+        <entry file="file://$PROJECT_DIR$/models/zip.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="36" selection-end-column="74" />
+            <state relative-caret-position="155">
+              <caret line="114" column="53" lean-forward="true" selection-start-line="114" selection-start-column="53" selection-end-line="114" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/attacks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="64" column="67" lean-forward="true" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -52,63 +51,75 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robust/cifar10_mixup_continue34_60e.py">
+        <entry file="file://$PROJECT_DIR$/trades.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="188" column="72" lean-forward="true" selection-start-line="188" selection-start-column="15" selection-end-line="188" selection-end-column="72" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robust/cifar10_adv34.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
+              <folding>
+                <element signature="e#24#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_60e.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="671">
+              <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+              <folding>
+                <element signature="e#24#42#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/robust/cifar10_half_mixup_adv34.py">
+        <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+            <state relative-caret-position="486">
+              <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robust/cifar10_mixup_warm34.py">
+        <entry file="file://$PROJECT_DIR$/robust/cifar10_eval34_40e.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="281" />
+            <state relative-caret-position="182">
+              <caret line="28" column="29" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robust/cifar10_warm34.py">
+        <entry file="file://$PROJECT_DIR$/scripts/gaussian.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="258" />
+            <state relative-caret-position="386">
+              <caret line="39" selection-start-line="39" selection-start-column="2" selection-end-line="43" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temp/canny.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="92" column="35" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="35" />
               <folding>
-                <element signature="e#24#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robust/cifar10_mixup_adv34.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3375">
-              <caret line="393" column="24" lean-forward="true" selection-start-line="393" selection-start-column="24" selection-end-line="393" selection-end-column="24" />
-              <folding>
-                <element signature="e#24#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/zip.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2505">
-              <caret line="167" column="30" lean-forward="true" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,17 +136,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dataroot</find>
-      <find>robust_attacks</find>
-      <find>args.dataset</find>
       <find>model\(</find>
       <find>dataset</find>
       <find>2\*</find>
       <find>optimizer</find>
-      <find>adversary</find>
       <find>random</find>
       <find>seed</find>
-      <find>vis_edge</find>
       <find>epoch_step</find>
       <find>if epoch in epoch_step:</find>
       <find>test_bs</find>
@@ -155,6 +161,11 @@
       <find>train()</find>
       <find>canny_net</find>
       <find>train\(\)</find>
+      <find>\[:half_len\]</find>
+      <find>vis_edge</find>
+      <find>get_edge</find>
+      <find>adversary</find>
+      <find>epsilon</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,14 +198,17 @@
         <option value="$PROJECT_DIR$/robust/cifar10_mixup_continue34_60e.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_mixup_adv34.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_half_mixup_adv34.py" />
+        <option value="$PROJECT_DIR$/attacks.py" />
+        <option value="$PROJECT_DIR$/scripts/gaussian.py" />
+        <option value="$PROJECT_DIR$/robust/cifar10_eval34_40e.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-160" />
-    <option name="y" value="-990" />
+    <option name="x" value="66" />
+    <option name="y" value="-905" />
     <option name="width" value="1608" />
-    <option name="height" value="973" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -212,12 +226,17 @@
             <path>
               <item name="adversarial" type="b2602c69:ProjectViewProjectNode" />
               <item name="adversarial" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="robust" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="adversarial" type="b2602c69:ProjectViewProjectNode" />
               <item name="adversarial" type="462c0819:PsiDirectoryNode" />
-              <item name="robust" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adversarial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adversarial" type="462c0819:PsiDirectoryNode" />
+              <item name="temp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -247,6 +266,35 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="gaussian" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="adversarial" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/gaussian.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.gaussian" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -257,45 +305,50 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578146316030</updated>
-      <workItem from="1578146317387" duration="45866000" />
+      <workItem from="1578146317387" duration="47702000" />
+      <workItem from="1578736615361" duration="9722000" />
+      <workItem from="1578842431926" duration="4267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45866000" />
+    <option name="totallyTimeSpent" value="61691000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-160" y="-990" width="1608" height="973" extended-state="0" />
+    <frame x="66" y="-905" width="1608" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2164751" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22158365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="File Transfer" visible="true" weight="0.19636777" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Remote Host" />
-      <window_info anchor="right" x="0" y="0" width="300" height="667" id="Documentation" side_tool="true" visible="true" weight="0.10025543" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="File Transfer" order="9" visible="true" weight="0.19636777" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" x="0" y="0" width="300" height="667" id="Documentation" order="5" side_tool="true" visible="true" weight="0.10025543" />
+      <window_info anchor="right" id="Database" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/adversarial$gaussian.coverage" NAME="gaussian Coverage Results" MODIFIED="1578913525061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/models/__init__.py">
@@ -364,41 +417,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attacks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2243">
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/wrn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robust/cifar10_warm28.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1638">
           <caret line="99" column="51" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="51" />
           <folding>
             <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trades.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="91" column="66" selection-start-line="91" selection-start-column="61" selection-end-line="91" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -424,122 +448,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv34.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-878">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_60e.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1073">
-          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1179">
-          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-972">
-          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/robust_canny.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6015">
-          <caret line="401" column="160" selection-start-line="401" selection-start-column="160" selection-end-line="401" selection-end-column="160" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vis_canny.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2074" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/canny.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="92" column="35" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/zip.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2505">
-          <caret line="167" column="30" lean-forward="true" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/defense_canny.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="907">
-          <caret line="348" column="60" selection-start-line="348" selection-start-column="60" selection-end-line="348" selection-end-column="60" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robust/robust_trades.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="36" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade34.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/canny_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="495" column="60" selection-start-line="495" selection-start-column="60" selection-end-line="495" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/robust_attacks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="85" column="35" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="35" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -553,10 +465,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_mixup_adv34.py">
+    <entry file="file://$PROJECT_DIR$/models/wrn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3375">
-          <caret line="393" column="24" lean-forward="true" selection-start-line="393" selection-start-column="24" selection-end-line="393" selection-end-column="24" />
+        <state relative-caret-position="795">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
           <folding>
             <element signature="e#24#42#0" expanded="true" />
           </folding>
@@ -566,7 +488,21 @@
     <entry file="file://$PROJECT_DIR$/robust/cifar10_mixup_continue34_60e.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
-          <caret line="188" column="72" lean-forward="true" selection-start-line="188" selection-start-column="15" selection-end-line="188" selection-end-column="72" />
+          <caret line="188" column="72" selection-start-line="188" selection-start-column="15" selection-end-line="188" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_half_mixup_adv34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_mixup_warm34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -580,17 +516,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_mixup_warm34.py">
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_mixup_adv34.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="281" />
+        <state relative-caret-position="216">
+          <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_half_mixup_adv34.py">
+    <entry file="file://$PROJECT_DIR$/vis_canny.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/defense_canny.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+        <state relative-caret-position="167">
+          <caret line="186" column="24" selection-start-line="186" selection-start-column="12" selection-end-line="186" selection-end-column="24" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/robust_attacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/robust_canny.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6105">
+          <caret line="407" column="28" selection-start-line="407" selection-start-column="28" selection-end-line="407" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1284">
+          <caret line="209" column="32" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="32" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="64" column="67" lean-forward="true" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trades.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/gaussian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="39" selection-start-line="39" selection-start-column="2" selection-end-line="43" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/canny.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="92" column="35" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/canny_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2850">
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/zip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="114" column="53" lean-forward="true" selection-start-line="114" selection-start-column="53" selection-end-line="114" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_eval_adv34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_60e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_eval34_40e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
         </state>
       </provider>
     </entry>
