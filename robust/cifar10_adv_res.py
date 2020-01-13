@@ -93,7 +93,7 @@ test_loader = torch.utils.data.DataLoader(
     num_workers=args.prefetch, pin_memory=torch.cuda.is_available())
 
 # Create model
-net = resnet_v2.__dict__[args.model_name]
+net = resnet_v2.__dict__[args.model_name]()
 
 start_epoch = 0
 
