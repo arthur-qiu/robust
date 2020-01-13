@@ -17,6 +17,11 @@ import sys
 sys.path.append('../')
 from models import resnet_v2
 
+model_names = sorted(name for name in resnet_v2.__dict__
+    if name.islower() and not name.startswith("__")
+                     and name.startswith("resnet")
+                     and callable(resnet_v2.__dict__[name]))
+
 
 parser = argparse.ArgumentParser(description='Trains a CIFAR Classifier',
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -35,7 +40,7 @@ parser.add_argument('--epoch_step', default='[32,34,36,38]', type=str,
                     help='json list with epochs to drop lr on')
 parser.add_argument('--lr_decay_ratio', default=0.2, type=float)
 # Architecture
-parser.add_argument('--model_name', default="resnet32", type=str, help='which model to use')
+parser.add_argument('--model_name', default="resnet32", type=str, choices=model_names, help='which model to use')
 parser.add_argument('--droprate', default=0.0, type=float, help='dropout probability')
 # Checkpoints
 parser.add_argument('--save', '-s', type=str, default='./logs/cifar10_adv', help='Folder to save checkpoints.')
