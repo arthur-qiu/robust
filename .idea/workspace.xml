@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/robust/cifar10_adv_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/cifar10_adv_res.py" afterDir="false" />
-    </list>
+    <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,20 +58,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
+            <state relative-caret-position="575">
               <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robust/cifar10_adv_res.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2085">
-              <caret line="153" column="71" selection-start-line="153" selection-start-column="71" selection-end-line="153" selection-end-column="71" />
+            <state relative-caret-position="390">
+              <caret line="40" column="37" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -92,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/resnet_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-388">
-              <caret line="30" column="42" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="42" />
+            <state relative-caret-position="-576">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="16" />
               <folding>
                 <element signature="e#997#1009#0" expanded="true" />
               </folding>
@@ -186,8 +184,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="98" />
-    <option name="y" value="79" />
+    <option name="x" value="-180" />
+    <option name="y" value="-902" />
     <option name="width" value="1608" />
     <option name="height" value="877" />
   </component>
@@ -293,15 +291,15 @@
       <updated>1578146316030</updated>
       <workItem from="1578146317387" duration="47702000" />
       <workItem from="1578736615361" duration="9722000" />
-      <workItem from="1578842431926" duration="7207000" />
+      <workItem from="1578842431926" duration="8468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64631000" />
+    <option name="totallyTimeSpent" value="65892000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="98" y="79" width="1608" height="877" extended-state="0" />
+    <frame x="-180" y="-902" width="1608" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22158365" />
@@ -666,23 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/resnet_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
-          <caret line="30" column="42" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="42" />
-          <folding>
-            <element signature="e#997#1009#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/wrn_with_pen.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -692,10 +673,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/resnet_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <element signature="e#997#1009#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/robust/cifar10_adv_res.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2085">
-          <caret line="153" column="71" selection-start-line="153" selection-start-column="71" selection-end-line="153" selection-end-column="71" />
+        <state relative-caret-position="390">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
         </state>
       </provider>
     </entry>
