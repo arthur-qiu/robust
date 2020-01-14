@@ -51,11 +51,11 @@ parser.add_argument('--dataroot', default='.', type=str)
 parser.add_argument('--ngpu', type=int, default=1, help='0 = CPU.')
 parser.add_argument('--prefetch', type=int, default=1, help='Pre-fetching threads.')
 
-parser.add_argument('--epsilon', type=float, default=0.031,
+parser.add_argument('--epsilon', type=float, default=8/255,
                     help='perturbation')
 parser.add_argument('--num_steps', type=int, default=10,
                     help='perturb number of steps')
-parser.add_argument('--step_size', type=float, default=0.007,
+parser.add_argument('--step_size', type=float, default=2/255,
                     help='perturb step size')
 parser.add_argument('--random_seed', type=int, default=1)
 
@@ -151,7 +151,7 @@ optimizer = torch.optim.SGD(
 #
 #
 adversary_train = robust_attacks.PGD(epsilon=args.epsilon, num_steps=args.num_steps, step_size=args.step_size).cuda()
-adversary = robust_attacks.PGD(epsilon=0.031, num_steps=20, step_size=0.003).cuda()
+adversary = robust_attacks.PGD(epsilon=8/255, num_steps=10, step_size=2/255).cuda()
 
 # /////////////// Training ///////////////
 
