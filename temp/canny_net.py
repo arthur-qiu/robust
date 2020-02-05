@@ -3,12 +3,12 @@ import scipy.ndimage as ndi
 from scipy.ndimage import generate_binary_structure, binary_erosion, label
 from torch.autograd import Function
 
-import skimage
-import skimage.io
-import skimage.feature
-from skimage.filters import gaussian
-from skimage import dtype_limits, img_as_float
-from skimage._shared.utils import assert_nD
+# import skimage
+# import skimage.io
+# import skimage.feature
+# from skimage.filters import gaussian
+# from skimage import dtype_limits, img_as_float
+# from skimage._shared.utils import assert_nD
 
 import torch
 import torch.nn as nn

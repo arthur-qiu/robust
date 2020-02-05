@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="" />
+    <list default="true" id="9471a276-3d88-410e-b610-35ea9b3711f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cifar10_adv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar10_adv_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar10_da.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar10_label.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar10_label03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar10_label03_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar10_label_continue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar10_semi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar10_semi_dir.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar10_warm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar10_warm_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cifar2imgnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/read_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attacks.py" beforeDir="false" afterPath="$PROJECT_DIR$/attacks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/wrn.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/wrn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robust/robust_attacks.py" beforeDir="false" afterPath="$PROJECT_DIR$/robust/robust_attacks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tune.py" beforeDir="false" afterPath="$PROJECT_DIR$/tune.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,10 +32,76 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3525">
+              <caret line="249" selection-start-line="249" selection-end-line="251" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3135">
+              <caret line="209" column="32" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="32" />
+              <folding>
+                <element signature="e#24#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade34.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="382" />
+              <folding>
+                <element signature="e#24#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/defense_canny.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="210" column="49" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="49" />
+              <folding>
+                <element signature="e#24#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temp/robust_canny.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6105">
+              <caret line="407" column="28" selection-start-line="407" selection-start-column="28" selection-end-line="407" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/temp/canny_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2850">
-              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-start-column="2" selection-end-line="10" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="400" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -23,77 +110,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/zip.py">
+        <entry file="file://$PROJECT_DIR$/cifar10_cifar_semi10k.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="114" column="53" lean-forward="true" selection-start-line="114" selection-start-column="53" selection-end-line="114" selection-end-column="53" />
+            <state relative-caret-position="1980">
+              <caret line="146" column="50" selection-start-line="146" selection-start-column="50" selection-end-line="146" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/wrn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1770">
+              <caret line="118" selection-start-line="118" selection-end-line="118" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robust/cifar10_adv34.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-              <folding>
-                <element signature="e#24#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_60e.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-              <folding>
-                <element signature="e#24#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robust/cifar10_adv_res.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="40" column="37" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/wrn_with_pen.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/resnet_v2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-576">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="16" />
-              <folding>
-                <element signature="e#997#1009#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,9 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>optimizer</find>
-      <find>random</find>
-      <find>seed</find>
       <find>epoch_step</find>
       <find>if epoch in epoch_step:</find>
       <find>test_bs</find>
@@ -130,7 +158,6 @@
       <find>by</find>
       <find>train</find>
       <find>train()</find>
-      <find>canny_net</find>
       <find>train\(\)</find>
       <find>\[:half_len\]</find>
       <find>vis_edge</find>
@@ -140,6 +167,10 @@
       <find>load_state_dict_from_url</find>
       <find>net</find>
       <find>decay</find>
+      <find>epoch \+ 1</find>
+      <find>epoch\+1</find>
+      <find>trades_loss</find>
+      <find>canny_net</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,7 +186,6 @@
         <option value="$PROJECT_DIR$/temp/robust_canny.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_warm34.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_40k_warm34.py" />
-        <option value="$PROJECT_DIR$/robust/robust_attacks.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_warm28.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_adv34.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_40k_continue34_40e.py" />
@@ -163,11 +193,8 @@
         <option value="$PROJECT_DIR$/robust/cifar10_continue34_40e.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_continue34_60e.py" />
         <option value="$PROJECT_DIR$/robust/ori_cifar10_trade.py" />
-        <option value="$PROJECT_DIR$/robust/ori_cifar10_trade34.py" />
-        <option value="$PROJECT_DIR$/robust/std_cifar10_continue28_40e.py" />
         <option value="$PROJECT_DIR$/models/zip.py" />
         <option value="$PROJECT_DIR$/defense_canny.py" />
-        <option value="$PROJECT_DIR$/temp/canny_net.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_mixup_warm34.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_mixup_continue34_60e.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_mixup_adv34.py" />
@@ -180,13 +207,20 @@
         <option value="$PROJECT_DIR$/models/resnet_v3.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_adv_resnet.py" />
         <option value="$PROJECT_DIR$/robust/cifar10_adv_res.py" />
+        <option value="$PROJECT_DIR$/robust/robust_attacks.py" />
+        <option value="$PROJECT_DIR$/robust/std_cifar10_continue28_40e.py" />
+        <option value="$PROJECT_DIR$/robust/ori_cifar10_trade34.py" />
+        <option value="$PROJECT_DIR$/network.py" />
+        <option value="$PROJECT_DIR$/gan_networks.py" />
+        <option value="$PROJECT_DIR$/defense_gan_canny.py" />
+        <option value="$PROJECT_DIR$/temp/canny_net.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-180" />
-    <option name="y" value="-902" />
-    <option name="width" value="1608" />
+    <option name="x" value="241" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectView">
@@ -205,21 +239,6 @@
             <path>
               <item name="adversarial" type="b2602c69:ProjectViewProjectNode" />
               <item name="adversarial" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adversarial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adversarial" type="462c0819:PsiDirectoryNode" />
-              <item name="robust" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adversarial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adversarial" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adversarial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adversarial" type="462c0819:PsiDirectoryNode" />
               <item name="temp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -231,10 +250,17 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/robust" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/edge" />
       <recent name="$PROJECT_DIR$/robust" />
     </key>
   </component>
@@ -291,23 +317,28 @@
       <updated>1578146316030</updated>
       <workItem from="1578146317387" duration="47702000" />
       <workItem from="1578736615361" duration="9722000" />
-      <workItem from="1578842431926" duration="8468000" />
+      <workItem from="1578842431926" duration="17682000" />
+      <workItem from="1579326192787" duration="2421000" />
+      <workItem from="1579353259690" duration="3558000" />
+      <workItem from="1579864935155" duration="1562000" />
+      <workItem from="1580741069273" duration="5624000" />
+      <workItem from="1580886146341" duration="288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65892000" />
+    <option name="totallyTimeSpent" value="88559000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-180" y="-902" width="1608" height="877" extended-state="0" />
+    <frame x="241" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22158365" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2067239" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20509554" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -322,28 +353,30 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info anchor="right" id="Remote Host" order="3" sideWeight="0.49759036" weight="0.32988167" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="right" x="0" y="0" width="300" height="667" id="Documentation" order="5" side_tool="true" visible="true" weight="0.10025543" />
+      <window_info anchor="right" x="0" y="0" width="300" height="667" id="Documentation" order="5" sideWeight="0.50240964" side_tool="true" visible="true" weight="0.15808298" />
       <window_info anchor="right" id="Database" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/robust/ori_cifar10_trade34.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/adversarial$gaussian.coverage" NAME="gaussian Coverage Results" MODIFIED="1578913525061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cifar10_imgnet_dynsemi10k.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cifar10_same_semi10k.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/cifar10_label_continue.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -418,54 +451,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1325">
-          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_warm34.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2407">
           <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/robust_trades.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="36" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/std_cifar10_continue28_40e.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="168" column="45" lean-forward="true" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/wrn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade34.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -513,46 +502,6 @@
     <entry file="file://$PROJECT_DIR$/vis_canny.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/defense_canny.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="186" column="24" selection-start-line="186" selection-start-column="12" selection-end-line="186" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/robust_attacks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/robust_canny.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6105">
-          <caret line="407" column="28" selection-start-line="407" selection-start-column="28" selection-end-line="407" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1284">
-          <caret line="209" column="32" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="32" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/attacks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -590,39 +539,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp/canny_net.py">
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_eval_adv34.py" />
+    <entry file="file://$PROJECT_DIR$/models/resnet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2850">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        <state relative-caret-position="135">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="42" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/resnet_v3.py" />
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_eval34_40e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4845">
+          <caret line="337" lean-forward="true" selection-start-line="337" selection-end-line="337" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv_resnet.py" />
     <entry file="file://$PROJECT_DIR$/models/zip.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="114" column="53" lean-forward="true" selection-start-line="114" selection-start-column="53" selection-end-line="114" selection-end-column="53" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_eval_adv34.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv34.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -637,30 +579,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/resnet.py">
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="615">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/resnet_v3.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_eval34_40e.py">
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv_res.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4845">
-          <caret line="337" lean-forward="true" selection-start-line="337" selection-end-line="337" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv_resnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="92" selection-start-line="92" selection-end-line="93" selection-end-column="41" />
+        <state relative-caret-position="390">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -683,17 +612,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv_res.py">
+    <entry file="file://$PROJECT_DIR$/robust/std_cifar10_continue28_40e.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="329">
+          <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robust/cifar10_continue34_40e.py">
+    <entry file="file://$PROJECT_DIR$/robust/robust_attacks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+        <state relative-caret-position="1380">
+          <caret line="92" column="36" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/robust_trades.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_adv34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edge/edge_attacks.py" />
+    <entry file="file://$PROJECT_DIR$/gan_networks.py" />
+    <entry file="file://$PROJECT_DIR$/defense_gan_canny.py" />
+    <entry file="file://$PROJECT_DIR$/robust/cifar10_40k_continue34_60e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3525">
+          <caret line="249" selection-start-line="249" selection-end-line="251" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3135">
+          <caret line="209" column="32" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="32" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robust/ori_cifar10_trade34.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="382" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="400" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cifar10_cifar_semi10k.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="146" column="50" selection-start-line="146" selection-start-column="50" selection-end-line="146" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/wrn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1770">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/defense_canny.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="210" column="49" selection-start-line="210" selection-start-column="4" selection-end-line="210" selection-end-column="49" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/robust_canny.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6105">
+          <caret line="407" column="28" selection-start-line="407" selection-start-column="28" selection-end-line="407" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/canny_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-start-column="2" selection-end-line="10" selection-end-column="45" />
         </state>
       </provider>
     </entry>
