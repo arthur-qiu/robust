@@ -510,8 +510,8 @@ for epoch in range(0, args.epochs):
 
     begin_epoch = time.time()
 
-    train()
     test_in_testset()
+    train()
     # test()
 
     # Save model
