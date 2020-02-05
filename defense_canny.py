@@ -511,7 +511,8 @@ for epoch in range(0, args.epochs):
     begin_epoch = time.time()
 
     train()
-    test()
+    test_in_testset()
+    # test()
 
     # Save model
     if epoch % 10 == 9:
