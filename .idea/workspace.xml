@@ -63,11 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/temp/canny_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="5" selection-start-line="5" selection-start-column="2" selection-end-line="10" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -138,7 +135,6 @@
       <find>best_test_accuracy</find>
       <find>self.save_for_backward</find>
       <find>self.threshold</find>
-      <find>self.TF</find>
       <find>by</find>
       <find>train</find>
       <find>train()</find>
@@ -158,6 +154,7 @@
       <find>assert_nD</find>
       <find>img_as_float</find>
       <find>New_TwoNets</find>
+      <find>self.TF</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -304,12 +301,12 @@
       <workItem from="1579353259690" duration="3558000" />
       <workItem from="1579864935155" duration="1562000" />
       <workItem from="1580741069273" duration="5624000" />
-      <workItem from="1580886146341" duration="2346000" />
+      <workItem from="1580886146341" duration="2989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90617000" />
+    <option name="totallyTimeSpent" value="91260000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="42" width="1440" height="877" extended-state="0" />
@@ -713,11 +710,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/temp/canny_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="5" selection-start-line="5" selection-start-column="2" selection-end-line="10" selection-end-column="45" />
         </state>
       </provider>
     </entry>

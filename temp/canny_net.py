@@ -132,162 +132,159 @@ class Canny_Net(nn.Module):
         abs_jsobel = torch.abs(jsobel)
         magnitude2 = isobel ** 2 + jsobel ** 2
         magnitude = torch.sqrt(magnitude2 + self.eps)
+        magnitude = self.TF(magnitude)
+        # magnitude[magnitude < self.thres] = 0.
 
+        # L186-L188
+        #
+        # Make the eroded mask. Setting the border value to zero will wipe
+        # out the image edges for us.
+        #
+        # assert x.shape[0] == 1
+        s = generate_binary_structure(2, 2)
+        mask = self.mask.detach().cpu().numpy()[0, 0]  # mask.shape: [32, 32]
+        eroded_mask = binary_erosion(mask, s, border_value=0)
+        eroded_mask = eroded_mask & (magnitude2.detach().cpu().numpy()[0, 0] > 0)  # replace magnitude by magnitude2
+        eroded_mask = torch.ByteTensor(eroded_mask.astype(np.uint8)).to(x.device)
+
+        # L195-L212
+        #
+        # --------- Find local maxima --------------
+        #
+        local_maxima = torch.zeros(x.shape).byte().to(x.device)
+        # ----- 0 to 45 degrees ------
+        pts_plus = (isobel >= 0) & (jsobel >= 0) & (abs_isobel >= abs_jsobel)
+        pts_minus = (isobel <= 0) & (jsobel <= 0) & (abs_isobel >= abs_jsobel)
+        pts = pts_plus | pts_minus
+        pts = eroded_mask & pts
+        c1 = magnitude[:, :, 1:, :][pts[:, :, :-1, :]]
+        c2 = magnitude[:, :, 1:, 1:][pts[:, :, :-1, :-1]]
+        m = magnitude[pts]
+        w = abs_jsobel[pts] / (abs_isobel[pts] + self.eps)
+        c_plus = c2 * w + c1 * (1 - w) <= m
+
+        s_0_45_1 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
+
+        c1 = magnitude[:, :, :-1, :][pts[:, :, 1:, :]]
+        c2 = magnitude[:, :, :-1, :-1][pts[:, :, 1:, 1:]]
+        c_minus = c2 * w + c1 * (1 - w) <= m
+
+        s_0_45_2 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
+        s_0_45 = torch.max(s_0_45_1, s_0_45_2)
+
+        local_maxima[pts] = c_plus & c_minus
+
+        # L216-L228
+        # ----- 45 to 90 degrees ------
+        # Mix diagonal and vertical
+        #
+        pts_plus = (isobel >= 0) & (jsobel >= 0) & (abs_isobel <= abs_jsobel)
+        pts_minus = (isobel <= 0) & (jsobel <= 0) & (abs_isobel <= abs_jsobel)
+        pts = pts_plus | pts_minus
+        pts = eroded_mask & pts
+        c1 = magnitude[:, :, :, 1:][pts[:, :, :, :-1]]
+        c2 = magnitude[:, :, 1:, 1:][pts[:, :, :-1, :-1]]
+        m = magnitude[pts]
+        w = abs_isobel[pts] / abs_jsobel[pts]
+        c_plus = c2 * w + c1 * (1 - w) <= m
+
+        s_45_90_1 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
+
+        c1 = magnitude[:, :, :, :-1][pts[:, :, :, 1:]]
+        c2 = magnitude[:, :, :-1, :-1][pts[:, :, 1:, 1:]]
+        c_minus = c2 * w + c1 * (1 - w) <= m
+
+        s_45_90_2 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
+        s_45_90 = torch.max(s_45_90_1, s_45_90_2)
+
+        local_maxima[pts] = c_plus & c_minus
+
+        # L232-L244
+        # ----- 90 to 135 degrees ------
+        # Mix anti-diagonal and vertical
+        #
+        pts_plus = (isobel <= 0) & (jsobel >= 0) & (abs_isobel <= abs_jsobel)
+        pts_minus = (isobel >= 0) & (jsobel <= 0) & (abs_isobel <= abs_jsobel)
+        pts = pts_plus | pts_minus
+        pts = eroded_mask & pts
+        c1a = magnitude[:, :, :, 1:][pts[:, :, :, :-1]]
+        c2a = magnitude[:, :, :-1, 1:][pts[:, :, 1:, :-1]]
+        m = magnitude[pts]
+        w = abs_isobel[pts] / abs_jsobel[pts]
+        c_plus = c2a * w + c1a * (1.0 - w) <= m
+
+        s_90_135_1 = F.relu(-m + self.gamma + (c2a * w + c1a * (1.0 - w)))
+
+        c1 = magnitude[:, :, :, :-1][pts[:, :, :, 1:]]
+        c2 = magnitude[:, :, 1:, :-1][pts[:, :, :-1, 1:]]
+        c_minus = c2 * w + c1 * (1.0 - w) <= m
+
+        s_90_135_2 = F.relu(-m + self.gamma + (c2a * w + c1a * (1.0 - w)))
+        s_90_135 = torch.max(s_90_135_1, s_90_135_2)
+
+        local_maxima[pts] = c_plus & c_minus
+
+        # L248-L260
+        # ----- 135 to 180 degrees ------
+        # Mix anti-diagonal and anti-horizontal
+        #
+        pts_plus = (isobel <= 0) & (jsobel >= 0) & (abs_isobel >= abs_jsobel)
+        pts_minus = (isobel >= 0) & (jsobel <= 0) & (abs_isobel >= abs_jsobel)
+        pts = pts_plus | pts_minus
+        pts = eroded_mask & pts
+        c1 = magnitude[:, :, :-1, :][pts[:, :, 1:, :]]
+        c2 = magnitude[:, :, :-1, 1:][pts[:, :, 1:, :-1]]
+        m = magnitude[pts]
+        w = abs_jsobel[pts] / abs_isobel[pts]
+        c_plus = c2 * w + c1 * (1 - w) <= m
+
+        s_135_180_1 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
+
+        c1 = magnitude[:, :, 1:, :][pts[:, :, :-1, :]]
+        c2 = magnitude[:, :, 1:, :-1][pts[:, :, :-1, 1:]]
+        c_minus = c2 * w + c1 * (1 - w) <= m
+
+        s_135_180_2 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
+        s_135_180 = torch.max(s_135_180_1, s_135_180_2)
+
+        local_maxima[pts] = c_plus & c_minus
+
+        # Final part
+        # local_maxima_np = (local_maxima.data.clone().cpu().numpy() == 1)[0][0]
+        # magnitude_np = magnitude.data.clone().cpu().numpy()[0][0]
+        local_maxima_np = (local_maxima.data.clone().cpu().numpy() == 1)
+        magnitude_np = magnitude.data.clone().cpu().numpy()
+        high_mask = local_maxima_np & (magnitude_np >= self.high_threshold)
+        low_mask = local_maxima_np & (magnitude_np >= self.low_threshold)
+
+        strel = np.ones((3, 3), bool)
+        mask_final_list = []
+        for i in range(x.shape[0]):
+            labels, count = label(low_mask[i][0], strel)
+            if count == 0:
+                mask_final = low_mask[i][0]
+            else:
+                sums = (np.array(ndi.sum(high_mask[i][0], labels,
+                                         np.arange(count, dtype=np.int32) + 1),
+                                 copy=False, ndmin=1))
+                good_label = np.zeros((count + 1,), bool)
+                good_label[1:] = sums > 0
+                output_mask = good_label[labels]
+                mask_final = output_mask
+            mask_final_list.append([mask_final])
+
+        mask_final = np.concatenate((mask_final_list), 0)
+        mask_final = np.reshape(mask_final.astype(np.float32),(x.shape[0], 1, 32, 32))
+
+        # magnitude = magnitude * torch.FloatTensor(mask_final).cuda()
+        magnitude = torch.FloatTensor(mask_final).cuda() + magnitude - magnitude.detach()
+        test = magnitude[magnitude != 0]
+        # magnitude = magnitude / magnitude.max().item()
+        # if magnitude.max().item() == 0:
+        #     print('yes')
+
+        # return s_0_45, s_45_90, s_90_135, s_135_180, local_maxima, test, magnitude
         return magnitude
-
-        # magnitude = self.TF(magnitude)
-        # # magnitude[magnitude < self.thres] = 0.
-        #
-        # # L186-L188
-        # #
-        # # Make the eroded mask. Setting the border value to zero will wipe
-        # # out the image edges for us.
-        # #
-        # # assert x.shape[0] == 1
-        # s = generate_binary_structure(2, 2)
-        # mask = self.mask.detach().cpu().numpy()[0, 0]  # mask.shape: [32, 32]
-        # eroded_mask = binary_erosion(mask, s, border_value=0)
-        # eroded_mask = eroded_mask & (magnitude2.detach().cpu().numpy()[0, 0] > 0)  # replace magnitude by magnitude2
-        # eroded_mask = torch.ByteTensor(eroded_mask.astype(np.uint8)).to(x.device)
-        #
-        # # L195-L212
-        # #
-        # # --------- Find local maxima --------------
-        # #
-        # local_maxima = torch.zeros(x.shape).byte().to(x.device)
-        # # ----- 0 to 45 degrees ------
-        # pts_plus = (isobel >= 0) & (jsobel >= 0) & (abs_isobel >= abs_jsobel)
-        # pts_minus = (isobel <= 0) & (jsobel <= 0) & (abs_isobel >= abs_jsobel)
-        # pts = pts_plus | pts_minus
-        # pts = eroded_mask & pts
-        # c1 = magnitude[:, :, 1:, :][pts[:, :, :-1, :]]
-        # c2 = magnitude[:, :, 1:, 1:][pts[:, :, :-1, :-1]]
-        # m = magnitude[pts]
-        # w = abs_jsobel[pts] / (abs_isobel[pts] + self.eps)
-        # c_plus = c2 * w + c1 * (1 - w) <= m
-        #
-        # s_0_45_1 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
-        #
-        # c1 = magnitude[:, :, :-1, :][pts[:, :, 1:, :]]
-        # c2 = magnitude[:, :, :-1, :-1][pts[:, :, 1:, 1:]]
-        # c_minus = c2 * w + c1 * (1 - w) <= m
-        #
-        # s_0_45_2 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
-        # s_0_45 = torch.max(s_0_45_1, s_0_45_2)
-        #
-        # local_maxima[pts] = c_plus & c_minus
-        #
-        # # L216-L228
-        # # ----- 45 to 90 degrees ------
-        # # Mix diagonal and vertical
-        # #
-        # pts_plus = (isobel >= 0) & (jsobel >= 0) & (abs_isobel <= abs_jsobel)
-        # pts_minus = (isobel <= 0) & (jsobel <= 0) & (abs_isobel <= abs_jsobel)
-        # pts = pts_plus | pts_minus
-        # pts = eroded_mask & pts
-        # c1 = magnitude[:, :, :, 1:][pts[:, :, :, :-1]]
-        # c2 = magnitude[:, :, 1:, 1:][pts[:, :, :-1, :-1]]
-        # m = magnitude[pts]
-        # w = abs_isobel[pts] / abs_jsobel[pts]
-        # c_plus = c2 * w + c1 * (1 - w) <= m
-        #
-        # s_45_90_1 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
-        #
-        # c1 = magnitude[:, :, :, :-1][pts[:, :, :, 1:]]
-        # c2 = magnitude[:, :, :-1, :-1][pts[:, :, 1:, 1:]]
-        # c_minus = c2 * w + c1 * (1 - w) <= m
-        #
-        # s_45_90_2 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
-        # s_45_90 = torch.max(s_45_90_1, s_45_90_2)
-        #
-        # local_maxima[pts] = c_plus & c_minus
-        #
-        # # L232-L244
-        # # ----- 90 to 135 degrees ------
-        # # Mix anti-diagonal and vertical
-        # #
-        # pts_plus = (isobel <= 0) & (jsobel >= 0) & (abs_isobel <= abs_jsobel)
-        # pts_minus = (isobel >= 0) & (jsobel <= 0) & (abs_isobel <= abs_jsobel)
-        # pts = pts_plus | pts_minus
-        # pts = eroded_mask & pts
-        # c1a = magnitude[:, :, :, 1:][pts[:, :, :, :-1]]
-        # c2a = magnitude[:, :, :-1, 1:][pts[:, :, 1:, :-1]]
-        # m = magnitude[pts]
-        # w = abs_isobel[pts] / abs_jsobel[pts]
-        # c_plus = c2a * w + c1a * (1.0 - w) <= m
-        #
-        # s_90_135_1 = F.relu(-m + self.gamma + (c2a * w + c1a * (1.0 - w)))
-        #
-        # c1 = magnitude[:, :, :, :-1][pts[:, :, :, 1:]]
-        # c2 = magnitude[:, :, 1:, :-1][pts[:, :, :-1, 1:]]
-        # c_minus = c2 * w + c1 * (1.0 - w) <= m
-        #
-        # s_90_135_2 = F.relu(-m + self.gamma + (c2a * w + c1a * (1.0 - w)))
-        # s_90_135 = torch.max(s_90_135_1, s_90_135_2)
-        #
-        # local_maxima[pts] = c_plus & c_minus
-        #
-        # # L248-L260
-        # # ----- 135 to 180 degrees ------
-        # # Mix anti-diagonal and anti-horizontal
-        # #
-        # pts_plus = (isobel <= 0) & (jsobel >= 0) & (abs_isobel >= abs_jsobel)
-        # pts_minus = (isobel >= 0) & (jsobel <= 0) & (abs_isobel >= abs_jsobel)
-        # pts = pts_plus | pts_minus
-        # pts = eroded_mask & pts
-        # c1 = magnitude[:, :, :-1, :][pts[:, :, 1:, :]]
-        # c2 = magnitude[:, :, :-1, 1:][pts[:, :, 1:, :-1]]
-        # m = magnitude[pts]
-        # w = abs_jsobel[pts] / abs_isobel[pts]
-        # c_plus = c2 * w + c1 * (1 - w) <= m
-        #
-        # s_135_180_1 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
-        #
-        # c1 = magnitude[:, :, 1:, :][pts[:, :, :-1, :]]
-        # c2 = magnitude[:, :, 1:, :-1][pts[:, :, :-1, 1:]]
-        # c_minus = c2 * w + c1 * (1 - w) <= m
-        #
-        # s_135_180_2 = F.relu(-m + self.gamma + (c2 * w + c1 * (1 - w)))
-        # s_135_180 = torch.max(s_135_180_1, s_135_180_2)
-        #
-        # local_maxima[pts] = c_plus & c_minus
-        #
-        # # Final part
-        # # local_maxima_np = (local_maxima.data.clone().cpu().numpy() == 1)[0][0]
-        # # magnitude_np = magnitude.data.clone().cpu().numpy()[0][0]
-        # local_maxima_np = (local_maxima.data.clone().cpu().numpy() == 1)
-        # magnitude_np = magnitude.data.clone().cpu().numpy()
-        # high_mask = local_maxima_np & (magnitude_np >= self.high_threshold)
-        # low_mask = local_maxima_np & (magnitude_np >= self.low_threshold)
-        #
-        # strel = np.ones((3, 3), bool)
-        # mask_final_list = []
-        # for i in range(x.shape[0]):
-        #     labels, count = label(low_mask[i][0], strel)
-        #     if count == 0:
-        #         mask_final = low_mask[i][0]
-        #     else:
-        #         sums = (np.array(ndi.sum(high_mask[i][0], labels,
-        #                                  np.arange(count, dtype=np.int32) + 1),
-        #                          copy=False, ndmin=1))
-        #         good_label = np.zeros((count + 1,), bool)
-        #         good_label[1:] = sums > 0
-        #         output_mask = good_label[labels]
-        #         mask_final = output_mask
-        #     mask_final_list.append([mask_final])
-        #
-        # mask_final = np.concatenate((mask_final_list), 0)
-        # mask_final = np.reshape(mask_final.astype(np.float32),(x.shape[0], 1, 32, 32))
-        #
-        # # magnitude = magnitude * torch.FloatTensor(mask_final).cuda()
-        # magnitude = torch.FloatTensor(mask_final).cuda() + magnitude - magnitude.detach()
-        # test = magnitude[magnitude != 0]
-        # # magnitude = magnitude / magnitude.max().item()
-        # # if magnitude.max().item() == 0:
-        # #     print('yes')
-        #
-        # # return s_0_45, s_45_90, s_90_135, s_135_180, local_maxima, test, magnitude
-        # return magnitude
 
     def vis_forward(self, x):
         # x.shape: [N, C, H, W] (?, 1, 32, 32)
@@ -315,7 +312,7 @@ class Canny_Net(nn.Module):
         abs_jsobel = torch.abs(jsobel)
         magnitude2 = isobel ** 2 + jsobel ** 2
         magnitude = torch.sqrt(magnitude2 + self.eps)
-        magnitude = self.TF()
+        magnitude = self.TF(magnitude)
 
         vis2 = magnitude.clone().detach()
 
