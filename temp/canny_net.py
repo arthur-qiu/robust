@@ -57,7 +57,7 @@ class Canny_Net(nn.Module):
         self.eps = 1e-9  # add to sqrt() to prevent nan grad
         self.gamma = 0.005  # margin
         self.thres = thres
-        self.TF = ThresholdF(thres)
+        # self.TF = ThresholdF(thres)
 
     def gaussian(self, x):
         # x.shape: [N, C, H, W] (?, 1, 32, 32)
@@ -132,6 +132,7 @@ class Canny_Net(nn.Module):
         abs_jsobel = torch.abs(jsobel)
         magnitude2 = isobel ** 2 + jsobel ** 2
         magnitude = torch.sqrt(magnitude2 + self.eps)
+        self.TF = ThresholdF(self.thres)
         magnitude = self.TF(magnitude)
         # magnitude[magnitude < self.thres] = 0.
 
